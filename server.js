@@ -69,7 +69,7 @@ app.get('/tuer', function(req, res) {
 
 	if (errorOrClouse == 0) {
 		sshlogin.on('close', (code) => {
-			res.send(close);
+			res.send(code);
 	  		console.log(`child process exited with code ${code}`);
 		});
 	}
