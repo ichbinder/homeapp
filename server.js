@@ -57,19 +57,19 @@ app.get('/tuer', function(req, res) {
 	const sshlogin = spawn('ssh', ['-tt', 'tuer@rpi01.local']);
 
 	sshlogin.stdout.on('data', (data) => {
-		res.send(data);
+		res.sendStatus(data);
 		console.log(`stdout: ${data}`);
 	});
 	var errorOrClouse = 0;
 	sshlogin.stderr.on('data', (data) => {
-		res.send(data);	
+		res.sendStatus(data);	
 		errorOrClouse = 1;
 	  	console.log(`stderr: ${data}`);
 	});
 
 	if (errorOrClouse == 0) {
 		sshlogin.on('close', (code) => {
-			res.send(code);
+			res.sendStatus(code);
 	  		console.log(`child process exited with code ${code}`);
 		});
 	}
