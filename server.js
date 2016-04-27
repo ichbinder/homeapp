@@ -60,19 +60,16 @@ app.get('/tuer', function(req, res) {
 		res.sendStatus(data);
 		console.log(`stdout: ${data}`);
 	});
-	var errorOrClouse = 0;
+
 	sshlogin.stderr.on('data', (data) => {
 		res.sendStatus(data);	
-		errorOrClouse = 1;
 	  	console.log(`stderr: ${data}`);
 	});
 
-	if (errorOrClouse == 0) {
-		sshlogin.on('close', (code) => {
-			res.sendStatus(code);
-	  		console.log(`child process exited with code ${code}`);
-		});
-	}
+	sshlogin.on('close', (code) => {
+		res.sendStatus(code);
+  		console.log(`child process exited with code ${code}`);
+	});
 });
 
 // API ROUTES -------------------
