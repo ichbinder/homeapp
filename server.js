@@ -62,7 +62,7 @@ app.get('/tuer', function(req, res) {
 	});
 
 	sshlogin.stderr.on('data', (data) => {
-		res.sendStatus(data);	
+		res.statusCode = 404;	
 	  	console.log(`stderr: ${data}`);
 	});
 
