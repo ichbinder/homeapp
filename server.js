@@ -34,40 +34,42 @@ app.get('/', function(req, res) {
     res.send('Hello! The API is at http://localhost:' + port + '/api');
 });
 
-// app.get('/setup', function(req, res) {
+app.get('/setup', function(req, res) {
 
-  // create a sample user
-  // var nick = new User({ 
-    // name: 'jakob', 
-    // password: 'hallo23',
-    // admin: true 
-  // });
+  //create a sample user
+  var nick = new User({ 
+    name: 'jakob', 
+    password: 'hallo23',
+    admin: true 
+  });
 
-  // save the sample user
-  //nick.save(function(err) {
-    //if (err) throw err;
+  //save the sample user
+  nick.save(function(err) {
+    if (err) throw err;
 
-    //console.log('User saved successfully');
-    //res.json({ success: true });
-  //});
-// });
+    console.log('User saved successfully');
+    res.json({ success: true });
+  });
+});
 
 app.get('/tuer', function(req, res) {
 
-	const ls = spawn('ls', ['-lh', '/usr']);
+	const sshlogin = spawn('ssh', ['-tt', 'tuer@rpi01.local']);
 
-	ls.stdout.on('data', (data) => {
-		//ŕes.send()
+	sshlogin.stdout.on('data', (data) => {
+		res.send(data);
 		console.log(`stdout: ${data}`);
 	});
 
-	ls.stderr.on('data', (data) => {
-	  console.log(`stderr: ${data}`);
+	sshlogin.stderr.on('data', (data) => {
+		res.send(data);
+	  	console.log(`stderr: ${data}`);
 	});
 
-	ls.on('close', (code) => {
-	  console.log(`child process exited with code ${code}`);
-	});
+	//sshlogin.on('close', (code) => {
+		//res.send(close);
+	  	//console.log(`child process exited with code ${code}`);
+	//});
 });
 
 // API ROUTES -------------------
