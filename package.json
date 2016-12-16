@@ -1,11 +1,34 @@
 {
-  "name": "homeapp",
-  "main": "server.js",
+  "name": "@my/project",
+  "version": "0.1.0",
+  "license": "private",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "gulp build",
+    "watch:build": "gulp watch:build"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "6.3.13",
+    "eslint": "2.9.0",
+    "eslint-config-airbnb-base": "3.0.1",
+    "eslint-plugin-import": "1.8.0",
+    "eslint-plugin-import-order": "2.1.4",
+    "gulp": "3.9.0",
+    "gulp-babel": "6.1.1",
+    "gulp-util": "3.0.7"
+  },
   "dependencies": {
+<<<<<<< HEAD
     "body-parser": "~1.0.1",
     "express": "~4.0.0",
     "jsonwebtoken": "^5.7.0",
     "mongoose": "^4.4.13",
+=======
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "jsonwebtoken": "^7.0.0",
+    "mongoose": "^4.4.19",
+>>>>>>> 271ec33328cc3f30cb4324789059abd684e9973e
     "morgan": "^1.7.0"
   }
 }
