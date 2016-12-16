@@ -1,8 +1,8 @@
-let gulp = require( "gulp" );
-let gutil = require("gulp-util");
+var gulp = require( "gulp" );
+var gutil = require("gulp-util");
 
 module.exports.onError = function onError (err) {
-  let displayErr = gutil.colors.red(err);
+  var displayErr = gutil.colors.red(err);
   gutil.log(displayErr);
   gutil.beep();
   this.emit("end");
