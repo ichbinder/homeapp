@@ -52,22 +52,26 @@ app.get('/setup', function(req, res) {
   });
 });
 
-app.get('/tuer', function(req, res) {
+app.get('/tuer3', function(req, res) {
 
-	const sshlogin = spawn('ssh', ['-tt', 'tuer@rpi01.local']);
-
+	const sshlogin = spawn('ssh', ['-tt', 'tuer@rpi01']);
 	sshlogin.stdout.on('data', (data) => {
-		res.sendStatus(data);
+		//res.sendStatus(data);
+		//res.status(200).send(data);
 		console.log(`stdout: ${data}`);
 	});
 
 	sshlogin.stderr.on('data', (data) => {
-		res.statusCode = 404;	
+		//res.status(404).send(data);	
 	  	console.log(`stderr: ${data}`);
 	});
 
 	sshlogin.on('close', (code) => {
-		res.sendStatus(code);
+		//res.sendStatus(logssh);
+		//res.status(200).json( 'tuer', {
+        	//	message: 'code: '
+      		//} );
+		res.send('end'); 
   		console.log(`child process exited with code ${code}`);
 	});
 });
