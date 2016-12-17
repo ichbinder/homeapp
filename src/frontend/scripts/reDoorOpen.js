@@ -23,9 +23,7 @@ export default class TuerOpen extends React.Component {
   render() {
     return (
       <div className="addUser">
-        // <div className="form">
         <button onClick={this._handleOpenDoor} className="button">Tür Öffnen</button>
-        // </div>
       </div>
     );
   }
