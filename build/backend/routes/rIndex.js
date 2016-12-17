@@ -49,7 +49,7 @@ router.get('/', function (req, res) {
 });
 
 router.get('/tuer', function (req, res) {
-  sshLogin().this(function (resolve) {
+  sshLogin().then(function (resolve) {
     res.json({ resolve: true, msg: resolve });
   }).catch(function (error) {
     return res.json({ resolve: false, msg: error });
