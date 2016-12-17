@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const SERVER_URL = 'http://home.opentoken.de:8080';
 
-export class TuerOpen extends React.Component {
+export default class TuerOpen extends React.Component {
   constructor( props ) {
     super( props );
     this._handleOpenDoor = this._handleOpenDoor.bind( this );
