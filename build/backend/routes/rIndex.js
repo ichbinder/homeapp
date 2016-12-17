@@ -50,6 +50,10 @@ router.get('/', function (req, res) {
 
 router.get('/tuer', function (req, res) {
   sshLogin().then(function (resolve) {
+<<<<<<< HEAD
+=======
+    console.log('Tüer: ', resolve);
+>>>>>>> d35cd7cb7623a97186a1b62db1f2271195276c09
     res.json({ resolve: true, msg: resolve });
   }).catch(function (error) {
     return res.json({ resolve: false, msg: error });

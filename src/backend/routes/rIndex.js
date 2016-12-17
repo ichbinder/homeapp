@@ -44,6 +44,7 @@ router.get( '/', ( req, res ) => {
 router.get( '/tuer', ( req, res ) => {
   sshLogin()
   .then( ( resolve ) => {
+    console.log( 'Tüer: ', resolve );
     res.json( { resolve: true, msg: resolve } );
   } )
   .catch( error => res.json( { resolve: false, msg: error } ) );

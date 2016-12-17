@@ -1,0 +1,63 @@
+#main {
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+.headline {
+	width: 310px;
+	display: flex;
+	justify-content: center;
+	background-color: #f9f9f9;
+	padding-left: 20px;
+	padding-right: 20px;
+	align-self: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(55, 55, 55, 0.32);
+}
+
+.infoBox {
+	background-color: #b62e04;
+	margin-top: 10px;
+	width: 310px;
+	align-self: center;
+	padding: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(55, 55, 55, 0.32);
+}
+
+.addUser {
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 310px;
+	background-color: #f9f9f9;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(55, 55, 55, 0.32);
+}
+
+.form {
+	width: 155px;
+	align-self: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+body {
+    background: #ffffff url("../images/cmimg.jpg") no-repeat;
+		background-size: cover;
+		display: flex;
+}
