@@ -1,5 +1,5 @@
 import React from 'react';
-import 'whatwg-fetch';
+import DoorOpen from 'reDoorOpen';
 
 export class ReMain extends React.Component {
   constructor( props ) {
@@ -12,7 +12,7 @@ export class ReMain extends React.Component {
         <div className="headline">
           <h2>Türöffner</h2>
         </div>
-
+        <DoorOpen />
       </div>
     );
   }

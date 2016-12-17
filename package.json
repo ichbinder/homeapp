@@ -1,5 +1,5 @@
 {
-"name": "@my/project",
+  "name": "@my/project",
   "version": "0.1.0",
   "license": "private",
   "main": "build/index.js",
@@ -24,6 +24,7 @@
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-jwt": "^5.1.0",
@@ -31,14 +32,14 @@
     "js-yaml": "^3.6.1",
     "jsonwebtoken": "^7.1.9",
     "ldapjs": "^1.0.0",
+    "mongoose": "^4.4.19",
+    "morgan": "^1.7.0",
     "nodemailer": "^2.6.4",
     "pug": "^2.0.0-beta6",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "simple-node-logger": "^0.93.12",
     "ssha": "^1.0.1",
-    "whatwg-fetch": "^1.0.0",
-    "mongoose": "^4.4.19",
-    "morgan": "^1.7.0"
+    "whatwg-fetch": "^1.0.0"
   }
 }
