@@ -10,7 +10,7 @@ import rIndex from '../routes/rIndex';
 
 const app = express();
 
-app.set( 'port', process.env.PORT || 3000 );
+app.set( 'port', process.env.PORT || 8080 );
 
 // laden den bodyParser
 app.use( bodyParser.urlencoded( { extended: true } ) );
