@@ -1,5 +1,5 @@
 import React from 'react';
-import DoorOpen from 'reDoorOpen';
+import DoorOpen from './reDoorOpen';
 
 export class ReMain extends React.Component {
   constructor( props ) {
