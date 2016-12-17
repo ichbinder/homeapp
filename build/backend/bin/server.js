@@ -27,7 +27,7 @@ var app = (0, _express2.default)();
 // import expressJWT from 'express-jwt';
 
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8080);
 
 // laden den bodyParser
 app.use(_bodyParser2.default.urlencoded({ extended: true }));
