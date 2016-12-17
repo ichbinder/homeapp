@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-const SERVER_URL = 'http://home.opentoken.de:8080';
+const SERVER_URL = 'https://home.opentoken.de';
 
 export default class TuerOpen extends React.Component {
   constructor( props ) {
