@@ -9,9 +9,9 @@ export class ReMain extends React.Component {
   render() {
     return (
       <div className="content">
-        <div className="headline">
-          <h2>Türöffner</h2>
-        </div>
+        <header>
+          <h1>Türöffner</h1>
+        </header>
         <DoorOpen />
       </div>
     );

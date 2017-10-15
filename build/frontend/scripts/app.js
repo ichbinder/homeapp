@@ -21512,10 +21512,10 @@
 	        'div',
 	        { className: 'content' },
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'headline' },
+	          'header',
+	          null,
 	          _react2.default.createElement(
-	            'h2',
+	            'h1',
 	            null,
 	            'T\xFCr\xF6ffner'
 	          )
@@ -21585,11 +21585,15 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'addUser' },
+	        { className: 'divButton' },
 	        _react2.default.createElement(
 	          'button',
-	          { onClick: this._handleOpenDoor, className: 'button' },
-	          'T\xFCr \xD6ffnen'
+	          { onClick: this._handleOpenDoor, className: 'button button1' },
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            'T\xFCr \xD6ffnen'
+	          )
 	        )
 	      );
 	    }
