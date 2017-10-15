@@ -40,11 +40,17 @@
 	width: 310px;
 	background-color: #f9f9f9;
 	padding-left: 20px;
+	padding-top: 20px;
 	padding-right: 20px;
 	padding-bottom: 20px;
 	margin-top: 10px;
 	margin-bottom: 20px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(55, 55, 55, 0.32);
+}
+
+.button {
+	height: 200px;
+	width: 300px;
 }
 
 .form {
